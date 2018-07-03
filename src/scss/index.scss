@@ -1,0 +1,67 @@
+.clearfix::after,.clearfix::before{
+    content: "";
+    height:0;
+    width: 100%;
+    clear: both;
+    display: block;
+    visibility:hidden;
+    overflow: hidden;
+    zoom: 1;
+}
+
+
+
+.container-fluid{
+    font-size: 16px;
+    font-family: "微软雅黑";
+    .row.app-header{
+        height: 40px;
+        line-height: 40px;
+        font-size: 17px;
+        color:rgb(222, 184, 135);
+        background-color: rgb(0, 139, 139);
+        .username{
+            font-weight: 700;
+            color:#00af00;
+            margin-left: 10px;
+        }
+        .price{
+            font-weight: 700;
+            margin-left: 10px;
+            color:rgb(192, 54, 54);
+        }
+    }
+    .row.notice{
+        color: #333333;
+        font-weight: 700;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+    }
+    .row.contact{
+        color: #333333;
+        font-weight: 700;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        .name{
+            color:#ff6600;
+        }
+    }
+    .row.list-content{
+        .list-item{
+            list-style: none;
+            margin:  0 auto;
+            margin-top: 10px;
+            border-top: 2px solid #cccccc;
+            padding-top: 10px;
+            text-align: left;
+            .img{
+                max-width: 300px;
+            }
+            .text{
+                margin-top: 6px;
+            }
+        }
+    }
+}

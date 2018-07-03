@@ -73,6 +73,7 @@ const PROJECT_BUILD = "./build/";
 // CSS监听处理
 // SASS处理
 const sass = require('gulp-sass');
+ 
 /*********************************************************SASS的处理*******END************************************************************/
 
 /*********************************************************JS的处理*******STR************************************************************/
@@ -101,7 +102,7 @@ gulp.task('html', () => {
 // SASS处理
 gulp.task('sass', () => {
     return (
-        gulp.src(`${PROJECT_DIR}/*.scss`)
+        gulp.src(`${PROJECT_DIR}/scss/*.scss`)
         .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest(`${PROJECT_BUILD}/css/`))
@@ -110,14 +111,14 @@ gulp.task('sass', () => {
         }))
     )
 });
-
+ 
 //JS处理
 gulp.task('js', () => {
     return (
-        gulp.src(`${PROJECT_DIR}/*.js}`)
+        gulp.src(`${PROJECT_DIR}/js/*.js}`)
         .pipe(plumber())
         .pipe(uglify(uglifyOption))
-        .pipe(gulp.dest(`${PROJECT_BUILD}/js`))
+        .pipe(gulp.dest(`${PROJECT_BUILD}/js/`))
         .pipe(reload({
             stream:true
         }))
